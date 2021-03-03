@@ -17,6 +17,7 @@ class Dice:
         return score
 
 
+
 red = (250, 0, 0)
 green = (0, 250, 0)
 blue = (0, 0, 250)
@@ -24,16 +25,23 @@ white = (250, 250, 250)
 black = (0, 0, 0)
 # the basic colors to illustrate things
 pygame.init()  # activates the pygame module
-dims = (800, 800)
+dims = (1300, 750)
 window = pygame.display.set_mode(dims)  # created window object with the dimensions
 pygame.display.set_caption("Ur EEE Tarded")  # self motivation
 clock = pygame.time.Clock()  # created clock object to set frame rate
 dice = Dice()  # created dice object to get dice rolls for the game
 
 
+def draw_board():
+    window.fill(white)
+    pygame.draw.line(window, black, [100, 100], [400, 100])  # draws top line
+    pygame.draw.line(window, black, [400, 100], [400, 400])  # draws right side line
+    pygame.draw.line(window, black, [100, 100], [100, 400])  # draws left side line
+
+
 on = True  # will be the boolean to flip and kill the program loop
 while on:  # basic pygame loop
-    window.fill(white)  # just so it isn't black
+    draw_board()
     pygame.display.flip()  # refreshes the display rendering
     for e in pygame.event.get():  # everything is triggered by events
         if e.type == pygame.QUIT:  # pygame's built in QUIT will trigger if the X is clicked
