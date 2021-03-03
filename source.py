@@ -25,7 +25,7 @@ white = (250, 250, 250)
 black = (0, 0, 0)
 # the basic colors to illustrate things
 pygame.init()  # activates the pygame module
-dims = (1300, 750)
+dims = (1350, 750)
 window = pygame.display.set_mode(dims)  # created window object with the dimensions
 pygame.display.set_caption("Ur EEE Tarded")  # self motivation
 clock = pygame.time.Clock()  # created clock object to set frame rate
@@ -34,9 +34,33 @@ dice = Dice()  # created dice object to get dice rolls for the game
 
 def draw_board():
     window.fill(white)
-    pygame.draw.line(window, black, [100, 100], [400, 100])  # draws top line
-    pygame.draw.line(window, black, [400, 100], [400, 400])  # draws right side line
-    pygame.draw.line(window, black, [100, 100], [100, 400])  # draws left side line
+
+    pygame.draw.rect(window, black, (75, 150, 150, 150), width=3)
+    pygame.draw.rect(window, black, (225, 150, 150, 150), width=3)
+    pygame.draw.rect(window, black, (375, 150, 150, 150), width=3)
+    pygame.draw.rect(window, black, (525, 150, 150, 150), width=3)
+
+    pygame.draw.rect(window, black, (75, 300, 150, 150), width=3)
+    pygame.draw.rect(window, black, (225, 300, 150, 150), width=3)
+    pygame.draw.rect(window, black, (375, 300, 150, 150), width=3)
+    pygame.draw.rect(window, black, (525, 300, 150, 150), width=3)
+
+    pygame.draw.rect(window, black, (75, 450, 150, 150), width=3)
+    pygame.draw.rect(window, black, (225, 450, 150, 150), width=3)
+    pygame.draw.rect(window, black, (375, 450, 150, 150), width=3)
+    pygame.draw.rect(window, black, (525, 450, 150, 150), width=3)
+
+    pygame.draw.rect(window, black, (675, 300, 150, 150), width=3)
+    pygame.draw.rect(window, black, (825, 300, 150, 150), width=3)
+
+    pygame.draw.rect(window, black, (975, 150, 150, 150), width=3)
+    pygame.draw.rect(window, black, (1125, 150, 150, 150), width=3)
+
+    pygame.draw.rect(window, black, (975, 300, 150, 150), width=3)
+    pygame.draw.rect(window, black, (1125, 300, 150, 150), width=3)
+
+    pygame.draw.rect(window, black, (975, 450, 150, 150), width=3)
+    pygame.draw.rect(window, black, (1125, 450, 150, 150), width=3)
 
 
 on = True  # will be the boolean to flip and kill the program loop
